@@ -1,43 +1,27 @@
-
 package main;
 
+class Accounts {
+    private final int id;
+    private final String firstName;
+    private final String lastName;
+    private final String email;
+    private final String username;
+    private final String password;
 
-public class Accounts {
-
-    private static class Account {
-
-        public Account() {
-        }
-    }
-    
-    int id;
-    String firstName;
-    String lastName;
-    String email;
-    String username;
-    String password;
-    
-    public void addAccounts(int id, String fs, String ls, String email, String usern, String pass){
+    public Accounts(int id, String firstName, String lastName, String email, String username, String password) {
         this.id = id;
-        this.firstName = fs;
-        this.lastName = ls;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.email = email;
-        this.username = usern;
-        this.password = pass;
-    }
-    
-    public void viewAccounts(){
-        System.out.printf("%-5d %-15s %-15s %-30s %-15s\n",
-                this.id, this.firstName, this.lastName, this.email, this.username);
-    }      
-
-    void addAccount(Account account) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.username = username;
+        this.password = password;
     }
 
-    void addAccount(int id, String fs, String ls, String email, String usern, String pass) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void view() {
+        System.out.println("ID: " + id);
+        System.out.println("First Name: " + firstName);
+        System.out.println("Last Name: " + lastName);
+        System.out.println("Email: " + email);
+        System.out.println("Username: " + username);
     }
 }
-
-
